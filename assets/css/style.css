@@ -1,30 +1,31 @@
-/* Basisinstellingen */
+/* ===== Algemene layout ===== */
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f6f8;
+    background-color: #f8fafc;
     color: #2c3e50;
     display: flex;
 }
 
-/* Sidebar */
+/* ===== Sidebar ===== */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 280px;
-    height: 100%;
-    background-color: #34495e;
+    width: 260px;
+    height: 100vh;
+    background-color: #1e3a5f;
     color: #ecf0f1;
-    padding: 20px;
-    overflow-y: auto;
+    padding: 25px 20px;
     box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+    overflow-y: auto;
 }
 
 .sidebar h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
     margin-top: 0;
-    border-bottom: 1px solid #7f8c8d;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
     padding-bottom: 10px;
 }
 
@@ -32,97 +33,83 @@ body {
     display: block;
     color: #ecf0f1;
     text-decoration: none;
-    margin: 10px 0;
-    font-size: 1em;
-    transition: 0.3s;
+    margin: 8px 0;
+    padding: 5px 0;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
     color: #1abc9c;
 }
 
-/* Content area */
+/* ===== Content ===== */
 .content {
-    margin-left: 300px; /* Sidebar width + spacing */
+    margin-left: 280px;
     padding: 40px;
-    max-width: 1200px;
-}
-
-/* Typografie voor headings */
-.content h1, .content h2, .content h3 {
-    color: #2c3e50;
-    margin-top: 1.5em;
+    max-width: 1100px;
 }
 
 .content h1 {
-    font-size: 2.5em;
+    font-size: 2.3em;
     border-bottom: 2px solid #bdc3c7;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .content h2 {
-    font-size: 2em;
-    border-bottom: 1px solid #ecf0f1;
+    font-size: 1.8em;
+    margin-top: 40px;
+    border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
 .content h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    margin-top: 25px;
 }
 
-/* Paragraphs */
-.content p {
+.content p, .content ul {
     line-height: 1.7;
-    margin: 10px 0;
+    margin-bottom: 15px;
 }
 
-/* Tables */
+/* ===== Tabellen ===== */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin: 20px 0;
-}
-
-table, th, td {
-    border: 1px solid #ccc;
+    margin: 25px 0;
+    border: 1px solid #ddd;
 }
 
 th, td {
-    padding: 12px;
-    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 th {
     background-color: #ecf0f1;
 }
 
-/* Links in content */
-.content a {
-    color: #2980b9;
-    text-decoration: none;
-}
-
-.content a:hover {
-    text-decoration: underline;
-}
-
-/* Scrollbar styling */
+/* ===== Scrollbars ===== */
 .sidebar::-webkit-scrollbar, .content::-webkit-scrollbar {
     width: 8px;
 }
-
 .sidebar::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
     background-color: rgba(0,0,0,0.2);
     border-radius: 4px;
 }
 
-/* Responsief ontwerp voor schermen kleiner dan 768px */
+/* ===== Responsief ontwerp ===== */
 @media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
     .sidebar {
         position: relative;
         width: 100%;
         height: auto;
-        box-shadow: none; /* geen schaduw op mobiel */
+        box-shadow: none;
     }
 
     .content {
@@ -130,4 +117,3 @@ th {
         padding: 20px;
     }
 }
-

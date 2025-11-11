@@ -112,8 +112,14 @@ th {
         box-shadow: none;
     }
 
-    .content {
-        margin-left: 0;
-        padding: 20px;
+.content {
+    margin-left: 280px;
+    padding: 40px;
+    max-width: 1100px;
+    overflow-y: auto;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
     }
 }

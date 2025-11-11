@@ -87,7 +87,7 @@ th, td {
 }
 
 th {
-    background-color: #ecf0f1;
+    background-color: #ffb503;
 }
 
 /* ===== Scrollbars ===== */
@@ -95,7 +95,7 @@ th {
     width: 8px;
 }
 .sidebar::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(255, 181, 3);
     border-radius: 4px;
 }
 

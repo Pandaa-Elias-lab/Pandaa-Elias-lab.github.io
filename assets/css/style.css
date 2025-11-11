@@ -116,15 +116,18 @@ th {
     border-radius: 4px;
 }
 
-/* Responsief voor mobiel */
-@media (max-width: 768px) {
+/* Responsief ontwerp voor schermen kleiner dan 768px */
+@media screen and (max-width: 768px) {
     .sidebar {
         position: relative;
         width: 100%;
         height: auto;
+        box-shadow: none; /* geen schaduw op mobiel */
     }
+
     .content {
         margin-left: 0;
         padding: 20px;
     }
 }
+
